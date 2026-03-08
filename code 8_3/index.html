@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Happy Women's Day</title>
+
+<style>
+/* ===== TITLE BOX ===== */
+
+.titleBox{
+position:absolute;
+top:60px;
+width:100%;
+text-align:center;
+color:white;
+display:none;
+}
+
+/* ===== TITLE ===== */
+
+.title{
+
+font-family:'Dancing Script',cursive;
+
+font-size:85px;
+
+background:linear-gradient(
+45deg,
+#ff9a9e,
+#ffdde1,
+#ff758c,
+#ff9a9e
+);
+
+background-size:300%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:
+gradientMove 6s infinite linear,
+floatTitle 3s ease-in-out infinite;
+
+text-shadow:
+0 8px 25px rgba(0,0,0,0.5);
+
+}
+
+/* gradient chạy */
+
+@keyframes gradientMove{
+
+0%{background-position:0%}
+100%{background-position:300%}
+
+}
+
+/* chữ lượn */
+
+@keyframes floatTitle{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+
+}
+
+/* ===== SUBTITLE ===== */
+
+.subtitle{
+
+font-family:'Poppins',sans-serif;
+
+margin-top:10px;
+
+font-size:28px;
+
+font-style:italic;
+
+color:#2f0a15;
+
+letter-spacing:1px;
+
+text-shadow:
+0 4px 12px rgba(0,0,0,0.7);
+
+animation:fadeIn 3s ease;
+
+}
+
+/* hiện chữ */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+body{
+
+margin:0;
+height:100vh;
+width:100vw;
+
+background:
+/* linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), */
+url("anh_nen.jpg");
+
+background-size:cover;       /* ảnh phủ toàn màn hình */
+background-position:center;  /* căn giữa ảnh */
+background-repeat:no-repeat; /* không lặp ảnh */
+
+}
+
+/* ===== HEART START ===== */
+
+.startHeart{
+
+position:absolute;
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:90px;
+
+cursor:pointer;
+
+animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:translate(-50%,-50%) scale(1);}
+50%{transform:translate(-50%,-50%) scale(1.2);}
+100%{transform:translate(-50%,-50%) scale(1);}
+
+}
+
+/* ===== TITLE ===== */
+
+.titleBox{
+
+position:absolute;
+
+top:60px;
+
+width:100%;
+
+text-align:center;
+
+color:white;
+
+display:none;
+
+}
+
+.title{
+
+font-size:70px;
+
+font-weight:700;
+
+background:linear-gradient(45deg,#f2444a,#eaa592,#ffd1ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 5px 20px rgba(0,0,0,0.6);
+
+}
+
+.subtitle{
+
+margin-top:15px;
+
+font-size:26px;
+
+font-style:italic;
+
+text-shadow:0 3px 10px rgba(0,0,0,0.6);
+
+}
+
+/* ===== FLOWERS ===== */
+
+.flower{
+
+position:absolute;
+
+top:-100px;
+
+font-size:75px;
+
+cursor:pointer;
+
+animation:fall linear forwards;
+
+z-index:1;   /* phía sau */
+
+}
+
+.flower:hover{
+
+transform:scale(1.25);
+
+}
+
+@keyframes fall{
+
+to{
+transform:translateY(120vh) rotate(360deg);
+}
+
+}
+
+/* ===== LETTER ===== */
+
+/* .letter{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 25px 60px rgba(0,0,0,0.45);
+
+transition:0.35s;
+
+width:340px;
+
+} */
+
+
+.letter{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 25px 60px rgba(0,0,0,0.45);
+
+transition:0.35s;
+
+width:340px;
+
+z-index:10;   /* nằm trên hoa */
+
+}
+
+.letter.show{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+.letter img{
+
+width:240px;
+display:block;
+margin:15px auto;
+
+border-radius:12px;
+
+object-fit:cover;
+
+}
+
+.letter video{
+
+width:240px;
+display:block;
+margin:15px auto;
+
+border-radius:12px;
+
+}
+
+button{
+
+margin-top:18px;
+
+padding:10px 24px;
+
+border:none;
+
+background:#ff4d6d;
+
+color:white;
+
+border-radius:25px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+#wish{
+    margin-top:10px;
+    font-size:25px;
+    /* font-style:italic; */
+    color:#ff4fa3;
+
+    text-align:center;
+    line-height:1.6;
+
+    /* background:rgba(255,255,255,0.7);
+    padding:10px 15px;
+    border-radius:12px; */
+
+    /* box-shadow:0 4px 10px rgba(0,0,0,0.2); */
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEART START -->
+
+<div id="startHeart" class="startHeart">
+❤️
+</div>
+
+<!-- TITLE -->
+
+<div id="titleBox" class="titleBox">
+
+<div class="title">
+Happy Women's Day
+</div>
+
+<div class="subtitle">
+Đoán xem trong hoa có gì nào 😊 💐
+</div>
+
+</div>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- <audio id="music" autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio> -->
+<!-- LETTER -->
+<!-- 
+<div id="letter" class="letter">
+
+<video id="letterVideo" controls style="display:none; width:230px; border-radius:12px;">
+<source src="vid.mp4" type="video/mp4">
+</video>
+<p id="wish"></p>
+
+
+<br>
+
+<button onclick="closeLetter()">Đóng</button>
+
+</div> -->
+
+
+<div id="letter" class="letter">
+
+<img id="letterImg" src="" style="display:none; width:240px; border-radius:12px;">
+
+<video id="letterVideo" controls style="display:none; width:230px; border-radius:12px;">
+<source src="vid.mp4" type="video/mp4">
+</video>
+
+<p id="wish"></p>
+
+<br>
+
+<button onclick="closeLetter()">Đóng</button>
+
+</div>
+
+
+
+
+<script>
+
+const letters=[
+
+{
+// title:"Bức thư số 4 💌",
+text:"Chúc mừng 8-3 nhaaaa 🥰",
+video:"vid.mp4"
+},
+
+{
+// title:"Bức thư số 1 💌",
+text:"Ngày 8/3 thật nhiều niềm vui nè 😘",
+img:"1.JPG"
+},
+
+{
+// title:"Bức thư số 2 💌",
+text:"Luôn xinh đẹp nè 😍",
+img:"2.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Đáng iu nè 🤭",
+img:"3.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Cười xinh nè 😆",
+img:"11.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Kím nhiều tiền để dẫn ny đi chơi nhé ☺️",
+img:"8.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Đi ăn món ngon nữa 😁",
+img:"9.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Không hay giận dỗi nè 🤗",
+img:"4.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Không được bắt nạt ny nhá 🥺",
+img:"5.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Hư là bị phạt 😠",
+img:"6.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Ngoann mí tặng hoa 🌹",
+img:"7.JPG"
+},
+
+{
+// title:"Bức thư số 4 💌",
+text:"Mãi bên nhau bạn nhé ❤️",
+img:"10.JPG"
+},
+
+
+
+
+
+// {
+// // title:"Bức thư số 4 💌",
+// text:"Sức khoẻ nè.",
+// img:"IMG_5518.JPG"
+// },
+
+// {
+// // title:"Bức thư số 4 💌",
+// text:"Sức khoẻ nè.",
+// img:"IMG_5518.JPG"
+// },
+
+];
+const flowers=[
+
+"💐","🌹","🌷","🌺","🌸","🌻","🌼"
+
+];
+
+
+/* CLICK HEART START */
+
+document.getElementById("startHeart").onclick=function(){
+
+this.style.display="none";
+
+document.getElementById("titleBox").style.display="block";
+
+document.getElementById("music").play();
+
+startFlowers();
+
+}
+
+
+/* FLOWERS */
+
+function startFlowers(){
+
+setInterval(createFlower,700);
+
+}
+
+
+function createFlower(){
+
+const flower=document.createElement("div");
+
+flower.className="flower";
+
+flower.innerHTML=flowers[Math.floor(Math.random()*flowers.length)];
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.animationDuration=(Math.random()*4+6)+"s";
+
+flower.onclick=function(){
+
+showLetter();
+
+flower.remove();
+
+}
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+
+flower.remove();
+
+},10000);
+
+}
+
+
+/* OPEN LETTER */
+
+// let currentIndex = 0;
+
+// function showLetter(){
+
+//     const letter = document.getElementById("letter");
+
+//     const data = letters[currentIndex];
+
+//     // document.getElementById("letterTitle").innerText = data.title;
+//     document.querySelector(".letter img").src = data.img;
+//     document.getElementById("wish").innerText = data.text;
+
+//     letter.classList.add("show");
+
+//     // tăng index và quay vòng
+//     currentIndex = (currentIndex + 1) % letters.length;
+// }
+
+
+let currentIndex = 0;
+
+function showLetter(){
+
+const letter = document.getElementById("letter");
+const data = letters[currentIndex];
+
+const img = document.getElementById("letterImg");
+const video = document.getElementById("letterVideo");
+const music = document.getElementById("music");
+
+img.style.display="none";
+video.style.display="none";
+
+if(data.img){
+img.src=data.img;
+img.style.display="block";
+}
+
+if(data.video){
+video.src=data.video;
+video.style.display="block";
+
+music.pause();   // ⬅️ dừng nhạc nền
+video.play();    // ⬅️ chạy video
+}
+
+document.getElementById("wish").innerText=data.text;
+
+letter.classList.add("show");
+
+currentIndex = (currentIndex + 1) % letters.length;
+
+}
+
+
+function closeLetter(){
+
+const letter = document.getElementById("letter");
+const video = document.getElementById("letterVideo");
+const music = document.getElementById("music");
+
+letter.classList.remove("show");
+
+video.pause();
+video.currentTime = 0;
+
+music.play();  // ⬅️ nhạc chạy lại
+
+}
+
+</script>
+
+</body>
+</html>
